@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, interactive-widget=resizes-visual">
+    <title>刺法 学習アプリ</title>
+    <link rel="stylesheet" href="shihou-style.css">
+</head>
+<body>
+    <div id="game-screen" class="screen active">
+        <div id="info-bar">
+            <span id="current-target-info">表の空欄をタップして開始</span>
+        </div>
+
+        <div id="table-container">
+            <table id="point-table">
+                <thead>
+                    <tr>
+                        <th class="col-shihou">刺法</th>
+                        <th class="col-content">内容</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <!-- JSでランダムに自動生成 -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="quiz-container" class="hidden">
+            <div class="choices-grid">
+                <button class="choice-btn" onclick="checkAnswer(0)"></button>
+                <button class="choice-btn" onclick="checkAnswer(1)"></button>
+                <button class="choice-btn" onclick="checkAnswer(2)"></button>
+                <button class="choice-btn" onclick="checkAnswer(3)"></button>
+                <button class="choice-btn" onclick="checkAnswer(4)"></button>
+                <button class="choice-btn" onclick="checkAnswer(5)"></button>
+            </div>
+        </div>
+
+        <div id="complete-message" class="hidden">
+            学習完了！お疲れ様でした。
+        </div>
+    </div>
+
+    <script src="shihou-data.js"></script>
+    <script src="shihou-app.js"></script>
+</body>
+</html>
